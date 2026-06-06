@@ -1,0 +1,45 @@
+### Get all tasks
+GET http://localhost:5229/tasks
+
+###
+
+### Create a new task
+POST http://localhost:5229/tasks
+Content-Type: application/json
+
+{
+  "id": 1,
+  "name": "Learn .NET Minimal API",
+  "isCompleted": false
+}
+
+###
+
+### Get all tasks again
+GET http://localhost:5229/tasks
+
+###
+
+### Update task
+PUT http://localhost:5229/tasks/1
+Content-Type: application/json
+
+{
+  "name": "Updated",
+  "isCompleted": true
+}
+
+###
+
+### Get all tasks after update
+GET http://localhost:5229/tasks
+
+###
+
+### Delete task
+DELETE http://localhost:5229/tasks/1
+
+###
+
+### Get all tasks after delete
+GET http://localhost:5229/tasks
